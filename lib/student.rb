@@ -1,5 +1,5 @@
 class Student
-  attr_reader   :id
+  attr_reader   :id, :first_name, :last_name
   attr_accessor :gpa, :location
 
   def initialize(first_name, last_name)
@@ -10,7 +10,9 @@ class Student
   end
 
   def self.at_location(location, first_name, last_name)
+    puts "DEBUG: I am line 16 first: #{first_name} last: #{last_name}"
     student = Student.new(first_name, last_name)
+    puts "DEBUG: I am line 18 student: #{student}"
     student.location = location
     student
   end
